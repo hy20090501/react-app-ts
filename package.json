@@ -6,19 +6,33 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "@types/jest": "^24.0.24",
-    "@types/node": "^12.12.22",
-    "@types/react": "^16.9.17",
-    "@types/react-dom": "^16.9.4",
+    "antd": "^3.26.4",
+    "axios": "^0.19.0",
+    "babel-plugin-import": "^1.13.0",
+    "connected-react-router": "^6.6.1",
+    "customize-cra": "^0.9.1",
+    "history": "^4.10.1",
+    "less": "^3.10.3",
+    "lodash": "^4.17.15",
     "react": "^16.12.0",
+    "react-app-rewired": "^2.1.5",
     "react-dom": "^16.12.0",
+    "react-redux": "^7.1.3",
+    "react-router": "^5.1.2",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.0",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
     "typescript": "^3.7.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "react-app-rewired start",
+    "build": "sh -ac '. .env.${REACT_APP_ENV}; react-app-rewired build'",
+    "build:test": "REACT_APP_ENV=test yarn build",
+    "build:pro": "REACT_APP_ENV=pro yarn build",
+    "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -35,5 +49,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/history": "^4.7.3",
+    "@types/jest": "^24.0.24",
+    "@types/node": "^12.12.22",
+    "@types/react": "^16.9.17",
+    "@types/react-dom": "^16.9.4",
+    "@types/react-redux": "^7.1.5",
+    "@types/react-router-dom": "^5.1.3",
+    "@types/redux-logger": "^3.0.7",
+    "less-loader": "^5.0.0",
+    "mockjs": "^1.1.0"
   }
 }
