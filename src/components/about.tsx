@@ -7,10 +7,10 @@ interface Props {
     decrease: any,
     getList: any,
     count: number,
-    list: Array<{id: number, name: String}>,
+    list: Array<{id: number, name: string}>,
     about: {
         count: number,
-        list: Array<{id: number, name: String}>
+        list: Array<{id: number, name: string}>
     }
 }
 class About extends React.Component<Props, any> {

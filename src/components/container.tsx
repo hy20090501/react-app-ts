@@ -10,9 +10,9 @@ import { getMenuList } from '../actions/common'
 const { Header, Content, Footer, Sider } = Layout;
 
 interface Props {
-    routes: Array<{ path: String, extract?: boolean, component: object }>,
+    routes: Array<{ path: string, extract?: boolean, component: object }>,
     permission: object,
-    menuList: Array<{ url: String, name: String }>
+    menuList: Array<{ url: string, name: string }>
 }
 class Container extends React.Component<Props, any> {
     constructor(props: Props){
@@ -77,7 +77,7 @@ class Container extends React.Component<Props, any> {
                                 }}
                             >
                                 <Switch>
-                                    {routes.map((route:{ path: String, extract?: boolean, component: object }, i:number) => (
+                                    {routes.map((route:{ path: string, extract?: boolean, component: object }, i:number) => (
                                         <RouteWithSubRoutes key={i} {...route} permission={permission}/>
                                     ))}
                                 </Switch>

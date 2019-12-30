@@ -13,7 +13,7 @@ export function Topic() {
 }
 
 interface Props {
-    routes: Array<{ path: String, extract?: boolean, component: object }>,
+    routes: Array<{ path: string, extract?: boolean, component: object }>,
     permission: object,
     match: any
 }
